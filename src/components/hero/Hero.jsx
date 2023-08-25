@@ -18,9 +18,13 @@ const Hero = () => {
         >
           <FaFacebook /> Share
         </Link>
-        <div aria-roledescription="button" className={` ${styles.twitter} btn`}>
+        <Link
+          to="/https://twitter.com/intent/tweet"
+          aria-roledescription="button"
+          className={` ${styles.twitter} btn`}
+        >
           <FaTwitter /> Tweet
-        </div>
+        </Link>
         <div
           aria-roledescription="button"
           className={` ${styles.pinterest} btn`}
