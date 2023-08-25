@@ -13,7 +13,7 @@ const Hero = () => {
       </span>
       <div aria-roledescription="button" className={styles.buttons}>
         <Link
-          to="https://www.facebook.com/share.php?u=your_page_link.com"
+          to="https://www.facebook.com/share.php?u=https://css-utility.onrender.com"
           className={` ${styles.facebook} btn`}
         >
           <FaFacebook /> Share
