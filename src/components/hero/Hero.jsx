@@ -7,7 +7,7 @@ const Hero = () => {
     <div className={`sw ${styles.wrapper}`}>
       <h2>Beautiful CSS box-shadow examples</h2>
       <span className={styles.hero_text}>
-        All of these box-shadow were copied using CSS Scan logo CSS Scan (click
+        All of these box-shadows were copied using CSS Scan logo CSS Scan (click
         here to try a free demo). With CSS Scan you can easily inspect or copy
         any website's CSS. <span>📌 Press ⌘+D to bookmark this page</span>
       </span>
