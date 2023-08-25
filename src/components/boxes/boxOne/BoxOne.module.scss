@@ -1,0 +1,84 @@
+.wrapper {
+  margin-top: 100px;
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 70px;
+    width: 100%;
+    .box0 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 100%;
+      border-radius: 4px;
+      position: relative;
+      grid-column: span 3;
+
+      &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .tooltip {
+        visibility: visible;
+        width: 100%;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 0%;
+        z-index: 10;
+        font-size: 14px;
+        margin-bottom: 10px;
+
+        /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    .boxes {
+      grid-gap: 25px;
+
+      .box0 {
+        grid-column: span 12;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 700px) {
+  .wrapper {
+    .boxes {
+      grid-gap: 30px;
+
+      .box0 {
+        grid-column: span 6;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+  .wrapper {
+    .boxes {
+      grid-gap: 30px;
+
+      .box0 {
+        grid-column: span 4;
+      }
+    }
+  }
+}

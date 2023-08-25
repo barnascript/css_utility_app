@@ -1,0 +1,205 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  text-align: center;
+  gap: 20px;
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .hero_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 60%;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    .facebook {
+      grid-column: span 3;
+      background-color: #1877f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding-inline: 40px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        background-color: #0d5bc1;
+      }
+    }
+    .twitter {
+      grid-column: span 3;
+      background-color: #26a7de;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding-inline: 40px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        background-color: #188bbc;
+      }
+    }
+    .pinterest {
+      grid-column: span 3;
+      background-color: #e60023;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding-inline: 40px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        background-color: #b9041f;
+      }
+    }
+    .share {
+      grid-column: span 3;
+      background-color: #407640;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding-inline: 40px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-size: 16px;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+        background-color: #224722;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    margin-top: 120px;
+    gap: 5px;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .hero_text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 100%;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+
+      .facebook {
+        grid-column: span 12;
+      }
+      .twitter {
+        grid-column: span 12;
+      }
+      .pinterest {
+        grid-column: span 12;
+      }
+      .share {
+        grid-column: span 12;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: all 0.3s ease;
+          background-color: #224722;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 700px) {
+  .wrapper {
+    margin-top: 150px;
+    gap: 5px;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .hero_text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 100%;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+
+      .facebook {
+        grid-column: span 6;
+      }
+      .twitter {
+        grid-column: span 6;
+      }
+      .pinterest {
+        grid-column: span 6;
+      }
+      .share {
+        grid-column: span 6;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: all 0.3s ease;
+          background-color: #224722;
+        }
+      }
+    }
+  }
+}
