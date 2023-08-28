@@ -1,4 +1,4 @@
-const data = [
+const boxShadowData = [
   { id: 0, number: "#0", shadow: `rgba(149, 157, 165, 0.2) 0px 8px 24px` },
   {
     id: 1,
@@ -366,4 +366,4 @@ const data = [
     shadow: `rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px`,
   },
 ];
-export default data;
+export default boxShadowData;

@@ -25,6 +25,55 @@
       }
     }
 
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .buttons,
+      .checkboxes {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba($color: #000000, $alpha: 0.4);
+        font-size: 20px;
+        font-weight: 300;
+        small {
+          position: absolute;
+          font-size: 9px;
+          bottom: 25px;
+          color: rgba($color: #000000, $alpha: 0.6);
+        }
+      }
+      .box_shadows,
+      .css_shapes {
+        font-size: 20px;
+        font-weight: 300;
+        position: relative;
+        text-decoration: none;
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 1px;
+          width: 0;
+          background-color: red;
+          bottom: -2px;
+          left: 0;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        &:hover {
+          color: rgba($color: #000000, $alpha: 0.7);
+        }
+      }
+    }
+
     button {
       background-color: black;
       color: white;
@@ -45,7 +94,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -75,6 +124,10 @@
           font-size: 16px;
           white-space: nowrap;
         }
+      }
+
+      .links {
+        display: none;
       }
 
       button {

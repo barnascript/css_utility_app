@@ -2,6 +2,7 @@ import styles from "./Header.module.scss";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { LiaTimesSolid } from "react-icons/lia";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [menu, setMenu] = useState(false);
@@ -13,7 +14,18 @@ const Home = () => {
           <div className={styles.red}>🔴</div>
           <span>CSS Utility App</span>
         </h1>
-        <button>Get More Apps</button>
+        <div className={styles.links}>
+          <Link className={styles.box_shadows}>box-shadows</Link>
+          <Link className={styles.css_shapes}>css-shapes</Link>
+          <Link className={styles.buttons}>
+            <small>coming soon</small>
+            buttons
+          </Link>
+          <Link className={styles.checkboxes}>
+            <small>coming soon</small>checkboxes
+          </Link>
+        </div>
+
         {!menu && (
           <RxHamburgerMenu
             className={styles.open_menu}

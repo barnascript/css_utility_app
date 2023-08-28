@@ -1,0 +1,134 @@
+.wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .shapes {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 44px;
+
+    .shape_container,
+    .shape_container_two {
+      grid-column: span 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      padding: 60px;
+      padding-inline: 50px;
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .tooltip {
+        visibility: visible;
+        width: 100%;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 0%;
+        z-index: 10;
+        font-size: 14px;
+        margin-bottom: 10px;
+
+        /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+        opacity: 0;
+      }
+
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+
+      .shape {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .name {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
+
+    .shape_container_two {
+      .bubble_top {
+        /* Modify size here: */
+        --size: 50px;
+        position: relative;
+        width: var(--size);
+        height: calc(var(--size) * 0.66);
+        background: #333;
+        border-radius: 10px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border: calc(var(--size) * 0.13) solid transparent;
+          border-bottom-color: #333;
+          border-top: 0;
+          margin-left: calc(var(--size) * 0.13 * -1);
+          margin-top: calc(var(--size) * 0.13 * -1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    .shapes {
+      grid-gap: 10px;
+
+      .shape_container {
+        grid-column: span 12;
+      }
+    }
+  }
+}
+@media screen and (min-width: 376px) {
+  .wrapper {
+    .shapes {
+      grid-gap: 10px;
+
+      .shape_container {
+        grid-column: span 6;
+      }
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .wrapper {
+    .shapes {
+      grid-gap: 10px;
+
+      .shape_container {
+        grid-column: span 4;
+      }
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .wrapper {
+    .shapes {
+      grid-gap: 10px;
+
+      .shape_container {
+        grid-column: span 3;
+      }
+    }
+  }
+}

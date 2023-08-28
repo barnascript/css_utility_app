@@ -14,23 +14,27 @@ const Hero = () => {
       <div aria-roledescription="button" className={styles.buttons}>
         <Link
           to="https://www.facebook.com/share.php?u=https://css-utility.onrender.com"
+          target="_blank"
           className={` ${styles.facebook} btn`}
         >
           <FaFacebook /> Share
         </Link>
         <Link
-          to="/https://twitter.com/intent/tweet"
+          to="http://www.twitter.com/share?url=https://css-utility.onrender.com"
+          target="_blank"
           aria-roledescription="button"
           className={` ${styles.twitter} btn`}
         >
           <FaTwitter /> Tweet
         </Link>
-        <div
+        <Link
+          to={`http://pinterest.com/pin/create/button/?url=https://css-utility.onrender.com`}
+          target="_blank"
           aria-roledescription="button"
           className={` ${styles.pinterest} btn`}
         >
           <FaPinterest /> Pin
-        </div>
+        </Link>
         <div className={styles.share}>
           <FaShare />
           Share
