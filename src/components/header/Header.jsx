@@ -43,10 +43,10 @@ const Home = () => {
               onClick={() => setMenu(!menu)}
             />
             <ul>
-              <Link to="/">
+              <Link to="/" onClick={() => setMenu(false)}>
                 <li>Box Shadows</li>
               </Link>
-              <Link to="/shapes">
+              <Link to="/shapes" onClick={() => setMenu(false)}>
                 <li>Shapes</li>
               </Link>
               <li>Checkboxes</li>

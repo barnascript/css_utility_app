@@ -167,6 +167,31 @@
           right: 20px;
           top: -38px;
         }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0px;
+          width: 100%;
+          margin-right: -20px;
+          a {
+            width: 100%;
+            cursor: pointer;
+          }
+
+          li {
+            width: 100%;
+            font-size: 30px;
+            font-weight: 200;
+            border: 1px solid black;
+            padding: 20px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
