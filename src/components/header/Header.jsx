@@ -15,8 +15,12 @@ const Home = () => {
           <span>CSS Utility App</span>
         </h1>
         <div className={styles.links}>
-          <Link className={styles.box_shadows}>box-shadows</Link>
-          <Link className={styles.css_shapes}>css-shapes</Link>
+          <Link className={styles.box_shadows} to="/">
+            box-shadows
+          </Link>
+          <Link className={styles.css_shapes} to="/shapes">
+            css-shapes
+          </Link>
           <Link className={styles.buttons}>
             <small>coming soon</small>
             buttons
@@ -39,12 +43,10 @@ const Home = () => {
               onClick={() => setMenu(!menu)}
             />
             <ul>
-              <li>Lio</li>
-              <li>Lio</li>
-              <li>Lio</li>
-              <li>Lio</li>
-              <li>Lio</li>
-              <li>Lio</li>
+              <li>Box Shadows</li>
+              <li>Shapes</li>
+              <li>Checkboxes</li>
+              <li>Buttons</li>
             </ul>
           </div>
         )}

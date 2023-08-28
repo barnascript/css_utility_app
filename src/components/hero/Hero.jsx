@@ -1,15 +1,33 @@
 import styles from "./Hero.module.scss";
 import { FaFacebook, FaTwitter, FaPinterest, FaShare } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Hero = () => {
+  const location = useLocation();
+
+  const pathName = location.pathname;
+
+  const absolutePathName = pathName.replace("/", "");
+
+  const capFirstLetter = absolutePathName.slice(0, 1).toUpperCase();
+  const remainingLetters =
+    absolutePathName.slice(1, absolutePathName.length - 1) + "s";
+
+  const joinedLetters = capFirstLetter + remainingLetters;
+
   return (
     <div className={`sw ${styles.wrapper}`}>
-      <h2>Beautiful CSS box-shadow examples</h2>
+      <h2>
+        Beautiful CSS {pathName === "/" ? "Box-Shadow" : joinedLetters} examples
+      </h2>
       <span className={styles.hero_text}>
-        All of these box-shadows were copied using CSS Scan logo CSS Scan (click
-        here to try a free demo). With CSS Scan you can easily inspect or copy
-        any website's CSS. <span>📌 Press ⌘+D to bookmark this page</span>
+        Welcome to CSS Utility, the ultimate CSS utility that empowers
+        designers, developers, and enthusiasts to streamline their web styling
+        process like never before. Whether you're a seasoned pro or just diving
+        into the world of web design, our app is your go-to companion for
+        optimizing your CSS workflow and elevating your projects to new heights.
+        <span>📌 Press ⌘+D to bookmark this page</span>
       </span>
       <div aria-roledescription="button" className={styles.buttons}>
         <Link
