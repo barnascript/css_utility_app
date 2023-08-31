@@ -1,6 +1,15 @@
 .wrapper {
   margin-top: 100px;
   margin-bottom: 200px;
+
+  label {
+    margin-bottom: 400px;
+    background-color: red;
+
+    input {
+      width: 300px;
+    }
+  }
   .boxes {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

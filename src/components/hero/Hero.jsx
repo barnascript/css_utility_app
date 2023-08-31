@@ -23,7 +23,7 @@ const Hero = () => {
       </h2>
       <span className={styles.hero_text}>
         <p>
-          This is a clone. The original can be
+          The inspiration for this clone can
           <a href="http://getcssscan.com"> found here</a>
         </p>
         <span>📌 Press ⌘+D to bookmark this page</span>
