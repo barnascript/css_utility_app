@@ -22,11 +22,10 @@ const Hero = () => {
         Beautiful CSS {pathName === "/" ? "Box-Shadow" : joinedLetters} examples
       </h2>
       <span className={styles.hero_text}>
-        Welcome to CSS Utility, the ultimate CSS utility that empowers
-        designers, developers, and enthusiasts to streamline their web styling
-        process like never before. Whether you're a seasoned pro or just diving
-        into the world of web design, our app is your go-to companion for
-        optimizing your CSS workflow and elevating your projects to new heights.
+        <p>
+          This is a clone. The original can be
+          <a href="http://getcssscan.com"> found here</a>
+        </p>
         <span>📌 Press ⌘+D to bookmark this page</span>
       </span>
       <div aria-roledescription="button" className={styles.buttons}>

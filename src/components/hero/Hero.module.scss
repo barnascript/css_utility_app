@@ -16,6 +16,13 @@
     flex-direction: column;
     gap: 10px;
     max-width: 60%;
+
+    p {
+      font-weight: 500;
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
   .buttons {
